@@ -137,7 +137,7 @@ define(
 
                 if (this.getIsVisible()) {
                     var initCaptchaInterval = setInterval(function () {
-                        if (window.grecaptcha) {
+                        if (window.grecaptcha && window.grecaptcha.render) {
                             clearInterval(initCaptchaInterval);
                             me.initCaptcha();
                         }
